@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gugi&family=Lato:wght@100&family=Roboto:wght@100&family=Sofia&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}                         
+html{
+    height: 100%;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+}
+.grid-container >*{
+    box-shadow: -1px 1px  7px 0px white;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.primero{
+    grid-area: primero;
+    background-color: #45ac9c;
+}
+.segundo{
+    grid-area: segundo;
+    background-color: white;
+}
+.tercero{
+    grid-area: tercero;
+    background-color: white;
+}
+.cuarto{
+    grid-area: cuarto;
+    background-color: white;
+
+}
+.quinto{
+    grid-area: quinto;
+    background-color: white;
+}
+/*modo celular*/
+.grid-container{
+    display: grid;
+    gap: 5px; /* para separar los grid*/
+    grid-template: 
+    "primero"  50px
+    "segundo"  200px
+    "cuarto"   800px
+    "quinto"   300px /
+     480px auto;
+}
+/*modo tablet   mas de 600px*/
+@media (min-width:600px){
+    .grid-container{
+        /*alto de las filas*/
+        grid-template:
+        "primero"   50px
+        "segundo"   200px
+        "cuarto"    500px
+        "quinto"    400px/
+        /* ancho de las filas*/
+        auto
+        ;
+    }
+}     
+/*modo escritorio*/     
+@media (min-width:900px){
+    .grid-container{
+        /*alto de las filas*/
+        grid-template:
+        "primero"   50px
+        "segundo"   150px
+        "cuarto"    400px
+        "quinto"   390px/
+        /* ancho de las filas*/
+        auto
+        ;
+    }
+}
+/*ESTILOS DEL PRIMER APARTADO*/
+.nombredelsitio {
+    display: flex;
+    margin-top: auto;
+    color: black;
+}
+
+.enlaces{
+    text-align: right;
+    margin-top: -25px;
+    text-decoration: none;
+    
+}
+.enlaces a{
+    text-decoration: none;
+    color: white;
+}
+/*ESTILOS DEL SEGUNDO APARTADO*/
+.logoNombre{
+    position: absolute;
+    top: 90px;  
+}
+
+.asistencia{
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 10px;
+} 
+
+
+/*ESTILOS DEL CUARTO APARTADO*/
+.cuarto-item h3{
+    color: #45ac9c;
+    position: relative;
+    margin-left: 45%;
+}
+
+.formulario{
+    background: whitesmoke;
+    width: 400px;
+   
+    
+}
+.contenedor-Cuarto h3{
+    color: #45ac9c;
+    position: relative;
+}
+.contenedor-Cuarto{
+    background-color: rgb(254, 255, 255);
+    padding: 4.5em;
+    overflow: hidden;
+    height: auto;
+    max-width: 100%;
+    
+    
+}
+.contenedor-Cuarto-item{
+    margin: 1em;
+    padding: 1em;
+    color: black;
+    float: left;
+    margin-top: 2%;
+    position: relative;
+    height: auto;
+    max-width: 100%;
+    
+    
+}
+#item1{
+    background-color: rgb(241, 247, 247);
+    height: 250px;
+    width: 400px;
+    
+}
+#item2{
+    background-color: rgb(241, 247, 247);
+    height: 250px;
+    width: 400px;
+}
+#item3{
+    background-color: rgb(241, 247, 247);
+    height: 320px;
+    width: 390px;
+}
+/*  */
+
+
+/* ESTILOS DEL QUINTO APARTADO */
+.quinto{
+    margin-top: 200px;
+}
+.quinto-item a{
+    text-decoration: none;
+    color: black;
+}
+.contenedor-quinto{
+    background-color: #f0f3f3;
+    padding: 4.5em;
+    overflow: hidden;
+    height: auto;
+    max-width: 100%;
+   
+}
+.quinto-item{
+    margin: 4em;
+    padding: 1em;
+    color: black;
+    float: left;
+    margin-top: -6%;
+    position: relative;
+}
+#cont-quinto-item1{
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+    
+}
+.linkphone{
+    text-decoration: none;
+}
+#cont-quinto-item2{
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+}
+#cont-quinto-item3{
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+}
+
+.quinto-item h4{
+    margin: 4px;
+    border-bottom: 2px solid #45ac9c;
+    font-family: gugi;
+}

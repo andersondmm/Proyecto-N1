@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gugi&family=Lato:wght@100&family=Roboto:wght@100&family=Sofia&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}                         
+html{
+    height: 100%;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+}
+.grid-container >*{
+    box-shadow: -1px 1px  7px 0px white;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.primero{
+    grid-area: primero;
+    background-color: #45ac9c;
+}
+.segundo{
+    grid-area: segundo;
+    background-color: white;
+    
+}
+.tercero{
+    grid-area: tercero;
+    background-color: white;
+}
+.cuarto{
+    grid-area: cuarto;
+    background-color: rgb(241, 247, 247);
+
+}
+.quinto{
+    grid-area: quinto;
+    background-color: rgb(241, 235, 235);
+
+}
+.sexto{
+    grid-area: sexto;
+    background-color: white;
+}
+.septimo{
+    grid-area: septimo;
+    background-color: white;
+}
+.octavo{
+    grid-area: octavo;
+    background-color: white;
+}
+.noveno{
+    grid-area: noveno;
+    background-color: white;
+}
+/*modo celular*/
+.grid-container{
+    display: grid;
+    gap: 0px; /* para separar los grid*/
+    grid-template: 
+    "primero "  50px
+    "segundo"  200px
+    "tercero"  300px
+    "cuarto"   250px
+    "quinto"   90px
+    "sexto"    800px
+    "septimo"  900px
+    "octavo"   50px
+    "noveno"   300px /
+    480px auto;
+}
+/*modo tablet   mas de 600px*/
+@media (min-width:600px){
+    .grid-container{
+        /*alto de las filas*/
+        grid-template:
+        "primero"   50px
+        "segundo"   200px
+        "tercero"   250px
+        "cuarto"    400px
+        "quinto"    100px
+        "sexto"     850px
+        "septimo"   250px
+        "octavo"    50px
+        "noveno"    400px/
+        /* ancho de las filas*/
+          auto
+        ;
+    }
+}     
+/*modo escritorio*/     
+@media (min-width:900px){
+    .grid-container{
+        /*alto de las filas*/
+        grid-template:
+        "primero"   50px
+        "segundo"   150px
+        "tercero"   200px
+        "cuarto"    240px
+        "quinto"    50px
+        "sexto"     300px
+        "septimo"   300px
+        "octavo"   50px
+        "noveno"   300px/
+        /* ancho de las filas*/
+        auto
+        ;
+    }
+}
+/*ESTILOS DEL PRIMER APARTADO*/
+.nombredelsitio {
+    display: flex;
+    margin-top: auto;
+    color: black;
+}
+
+.enlaces{
+    text-align: right;
+    margin-top: -25px;
+    text-decoration: none;
+    
+}
+.enlaces a{
+    text-decoration: none;
+    color: white;
+}
+
+/*ESTILOS DEL SEGUNDO APARTADO*/
+
+.logoNombre{
+    position: absolute;
+    top: 90px;  
+    height: auto;
+    max-width: 100%;
+}
+.buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    background: rgb(143, 185, 206);
+    padding: 20px;
+    height: 20px;
+    border-radius: 30px;
+}
+.buscar_texto{
+    border: none;
+    background: none;
+    outline: none;
+    color: rgba(241, 233, 233, 0.993);
+    font-size: 20px;
+    float: left;
+    line-height: 60px;
+    transition: .3s;
+    width:10;
+}
+.boton{
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: rgb(245, 240, 240);
+    font-size: 30px;
+
+}
+.asistencia{
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 10px;
+    
+} 
+.cart{
+    float: right;
+    margin-right: 3vw;
+}
+
+.cart ion-icon{
+    vertical-align: bottom;
+    font-size: 20px;
+    padding-right: 5px;
+}
+.cart a{
+    background-color: rgb(62, 121, 126);
+    color: rgb(245, 239, 239);
+    cursor: pointer;
+    text-decoration: none;
+    
+} 
+
+
+/* ESTILOS DEL TERCER APARTADO*/
+.navegacion{
+    width: 100%;
+    margin-top: -3%;
+    
+    
+}
+.navegacion nav{
+    width: 90%;
+    max-width: 1100px;
+    /*background: #2D3447; */
+    background: white;
+    margin: 40px auto;
+    height: 80px;
+   
+}
+.navegacion nav ul{
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+.navegacion nav > ul > li{
+    display: inline-block;
+}
+.navegacion nav > ul > li > a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.navegacion nav > ul > li > a i{
+    font-size: 20px;
+    position: absolute;
+    bottom: -10px;
+    display: none;
+}
+.navegacion nav > ul > li:hover i{
+    display: block;
+
+}
+/*ESTILOS DEL SUBMENU*/
+li a{
+    text-decoration: none;
+    color: rgb(143, 185, 206);
+    
+    
+}
+.navegacion nav ul li .submenu{
+     background: #fff;
+     padding: 10px;
+     position: absolute;
+     display: none;
+     -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.24);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.24);
+}
+.navegacion nav ul li:hover .submenu{
+    display: flex;
+}
+.navegacion nav ul li .submenu .submenu-items{
+    margin:  0 20px;
+}
+.navegacion nav ul li .submenu p{
+    font-weight: 600;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #565656;
+    margin-bottom: 10px;
+}
+.navegacion nav ul li .submenu .submenu-items{
+    color: #474747;
+    text-decoration: none;
+    margin: 5px 0;
+    
+    
+}
+
+/* ESTILOS DEL CUARTO APARTADO */
+.swiper-container {
+    width: 1500px;
+    height: auto;
+    max-width: 100%;
+    margin: 4px auto;
+   
+    
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    position: absolute;
+    
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+.swiper-slide img{
+    height: 180px;
+  
+}
+/* ESTILOS DEL QUINTO APARTADO */
+.quinto{
+    background-color: #45ac9c;
+    
+}
+.quinto h3{
+    color: white;
+    font-size: 20px;
+}
+
+/* ESTILOS DEL SEXTO APARTADO */
+.contenedorsexto{
+    background-color: rgb(254, 255, 255);
+    padding: 4.5em;
+    overflow: hidden;
+    height: auto;
+    max-width: 100%;
+    
+    
+}
+.contenedorsexto-item{
+    margin: 1em;
+    padding: 1em;
+    color: black;
+    float: left;
+    margin-top: -6%;
+    position: relative;
+    
+}
+#item1{
+    background-color: rgb(241, 247, 247);
+    height: 250px;
+    width: 400px;
+    
+}
+#item2{
+    background-color: rgb(241, 247, 247);
+    height: 250px;
+    width: 400px;
+}
+#item3{
+    background-color: rgb(241, 247, 247);
+    height: 250px;
+    width: 400px;
+}
+#img1{
+    float: left;
+}
+#img2{
+    float: left;
+}
+#img3{
+    float: left;
+}
+/* ESTILOS DEL SÉPTIMO APARTADO */
+.contenedorseptimo{
+    background-color: white;
+    padding: 4.5em;
+    overflow: hidden;
+    
+    height: auto;
+    max-width: 100%;
+    
+}
+.septimo-item{
+    margin: 0.0em;
+    padding: 1em;
+    color: black;
+    float: left;
+    margin-top: -6%;
+    position: relative;
+    
+}
+.texto{
+    position: absolute;
+    top: 70%;
+    left: 40%;
+    font-size: 2vw;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+.texto2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2vw;
+    color: white;
+    transform: translate(-50%, -50%);
+}
+.texto3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 2vw;
+    color: black;
+    transform: translate(-50%, -50%);
+}
+/* ESTILOS DEL OCTAVO APARTADO */
+.octavo-item{
+    margin: 0.5em;
+    padding: 1em;
+    color: black;
+    float: right;
+    margin-top: -1%;
+    position: relative;
+}
+/* ESTILOS DEL NOVENO APARTADO */
+
+.contenedor-noveno{
+    background-color: #f0f3f3;
+    padding: 4.5em;
+    overflow: hidden;
+    height: auto;
+    max-width: 100%;
+}
+.noveno-item{
+    margin: 4em;
+    padding: 1em;
+    color: black;
+    float: left;
+    margin-top: -6%;
+    position: relative;
+}
+#cont-nove-item1{
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+                               
+}
+.linkphone{
+    text-decoration: none;
+}
+#cont-nove-item2{
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+}
+.noveno-item a{
+    text-decoration: none;
+    color: #000;
+    
+}
+#cont-nove-item3{
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+}
+
+.noveno-item h4{
+    margin: 4px;
+    border-bottom: 2px solid #45ac9c;
+    font-family: gugi;
+   
+}
+.informacion h3{
+    color: #45ac9c;
+    margin-left: 14vw;
+}
+
+.contenedorInfor{
+    background-color: rgb(254, 255, 255);
+    padding: 4.5em;
+    overflow: hidden;
+    height: auto;
+    max-width: 100%;
+    
+    
+}
+.contenedoInfor-item{
+    margin: 1em;
+    padding: 1em;
+    color: black;
+    float: left;
+    margin-top: -6%;
+    position: relative;
+    
+}
+
+#itemInfor{
+    background-color: rgb(241, 247, 247);
+    height: 400px;
+    width: 600px;
+    
+}
+#imgInfor{
+    float: 10vw;
+    margin-top: 4vw;
+    width: 370px;
+    height: 250px;
+}
