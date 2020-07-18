@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gugi&family=Lato:wght@100&family=Roboto:wght@100&family=Sofia&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}                         
+html{
+    height: 100%;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+}
+.grid-container >*{
+    box-shadow: -1px 1px  7px 0px white;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.primero{
+    grid-area: primero;
+    background-color: #45ac9c;
+}
+.segundo{
+    grid-area: segundo;
+    background-color: white;
+}
+.tercero{
+    grid-area: tercero;
+    background-color: white;
+}
+.cuarto{
+    grid-area: cuarto;
+    background-color: white;
+
+}
+.quinto{
+    grid-area: quinto;
+    background-color: white;
+}
+/*modo celular*/
+.grid-container{
+    display: grid;
+    gap: 5px; /* para separar los grid*/
+    grid-template: 
+    "primero"  50px
+    "segundo"  200px
+    "tercero"  300px
+    "cuarto"   400px
+    "quinto"   300px /
+     480px auto;
+}
+/*modo tablet   mas de 600px*/
+@media (min-width:600px){
+    .grid-container{
+        /*alto de las filas*/
+        grid-template:
+        "primero"   50px
+        "segundo"   200px
+        "tercero"   250px
+        "cuarto"    500px
+        "quinto"    400px/
+        /* ancho de las filas*/
+        auto
+        ;
+    }
+}     
+/*modo escritorio*/     
+@media (min-width:900px){
+    .grid-container{
+        /*alto de las filas*/
+        grid-template:
+        "primero"   50px
+        "segundo"   150px
+        "tercero"   200px
+        "cuarto"    470px
+        "quinto"   390px/
+        /* ancho de las filas*/
+        auto
+        ;
+    }
+}
+/*ESTILOS DEL PRIMER APARTADO*/
+.nombredelsitio {
+    display: flex;
+    margin-top: auto;
+    color: black;
+}
+
+.enlaces{
+    text-align: right;
+    margin-top: -25px;
+    text-decoration: none;
+    
+}
+.enlaces a{
+    text-decoration: none;
+    color: white;
+}
+/*ESTILOS DEL SEGUNDO APARTADO*/
+.logoNombre{
+    position: absolute;
+    top: 90px;  
+}
+.buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    background: rgb(143, 185, 206);
+    padding: 20px;
+    height: 20px;
+    border-radius: 30px;
+    
+}
+.buscar_texto{
+    border: none;
+    background: none;
+    outline: none;
+    color: rgba(241, 233, 233, 0.993);
+    font-size: 20px;
+    float: left;
+    line-height: 60px;
+    transition: .3s;
+    width:10;
+}
+.buscar .buscar_texto{
+    font-size: 1.2vw;
+}
+.boton{
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: rgb(245, 240, 240);
+    font-size: 30px;
+
+}
+.asistencia{
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 10px;
+} 
+/* ESTILOS DEL TERCER APARTADO*/
+.navegacion{
+    width: 100%;
+    margin-top: -3%;
+    
+    
+}
+.navegacion nav{
+    width: 90%;
+    max-width: 1100px;
+    /*background: #2D3447; */
+    background: white;
+    margin: 40px auto;
+    height: 80px;
+   
+}
+.navegacion nav ul{
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+.navegacion nav > ul > li{
+    display: inline-block;
+}
+.navegacion nav > ul > li > a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.navegacion nav > ul > li > a i{
+    font-size: 20px;
+    position: absolute;
+    bottom: -10px;
+    display: none;
+}
+.navegacion nav > ul > li:hover i{
+    display: block;
+
+}
+/*ESTILOS DEL SUBMENU*/
+li a{
+    text-decoration: none;
+    color: rgb(143, 185, 206);
+    
+    
+}
+.navegacion nav ul li .submenu{
+     background: #fff;
+     padding: 10px;
+     position: absolute;
+     display: none;
+     -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.24);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.24);
+}
+.navegacion nav ul li:hover .submenu{
+    display: flex;
+}
+.navegacion nav ul li .submenu .submenu-items{
+    margin:  0 20px;
+}
+.navegacion nav ul li .submenu p{
+    font-weight: 600;
+    width: 210px;
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #565656;
+    margin-bottom: 10px;
+}
+.navegacion nav ul li .submenu .submenu-items{
+    color: #474747;
+    text-decoration: none;
+    margin: 5px 0;
+    
+    
+}
+/*ESTILOS DEL CUARTO APARTADO*/
+
+.formulario{
+    background: whitesmoke;
+    width: 400px;
+   
+    
+}
+/* Centrar el texto Regístrate*/
+h1{
+    text-align: center;
+    color: #1a2537;
+    font-size: 40px;
+    margin-top: 8px;
+  
+}
+/*estilos a todos los input "cuadros donde se ingresará el texto"*/
+input[type="text"],
+input[type="password"]{
+    font-size: 10px;
+    width: 90%;
+    padding: 10px;
+    border: none;
+}
+/*clase input-contenedorRegistro*/
+.input-contenedorRegistro{
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #aaa;
+    
+}
+.icon{
+    min-width: 50px;
+    text-align: center;
+    color: #999;
+}
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background: #1a2537;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*efecto al pasar el puntero*/
+.button:hover{
+    background: cadetblue;
+}
+p{
+    text-align: center;
+}
+/*Quitarle el subrayado, color y tamaño al tipo de letra */
+.link{
+    text-decoration: none;
+    color: #1a2537;
+    font-weight: 600;
+}
+/*clase link, color al pasar el puntero sobre las palabras iniciar sesión*/
+.link:hover{
+    color: cadetblue;
+}
+/*para que se adapte usaré  @*/
+@media(min-width:768px){
+    .grid-container .formulario{
+        margin: auto;
+        width: 600px;
+        border-radius: 2%;
+    }
+}
+/* Formulario del contenido*/
+.formularioContenido{
+    /*background: rgba(175, 21, 21, 0.836);*/
+   /* margin-top: 100px;*/
+    padding: 3px;
+    width: 450px;
+    margin: auto;
+    margin-top: 100px;
+    background: #45ac9c;
+   
+    
+    
+}
+@media(min-width:768px){
+    .formularioContenido{
+        margin: auto;
+        width: 500px;
+        margin-top: 10px;
+        border-radius: 2%;
+        
+    }
+}   
+.cuarto-item{
+    float: left;
+    margin: 4em;
+    padding: 1em;
+    margin-top: 1vw;
+    position: relative;
+}
+
+
+                                            
+/* ESTILOS DEL QUINTO APARTADO */
+.quinto{
+    margin-top: 570px;
+}
+.contenedor-quinto{
+    background-color: #f0f3f3;
+    padding: 4.5em;
+    overflow: hidden;
+    height: 260px;
+   
+}
+.quinto-item a{
+    text-decoration: none;
+    color: black;
+}
+.quinto-item{
+    margin: 4em;
+    padding: 1em;
+    color: black;
+    float: left;
+    margin-top: -6%;
+    position: relative;
+}
+#cont-quinto-item1{              
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+    
+}
+.linkphone{
+    text-decoration: none;
+}
+#cont-quinto-item2{
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+}
+#cont-quinto-item3{
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+}
+
+.quinto-item h4{
+    margin: 4px;
+    border-bottom: 2px solid #45ac9c;
+    font-family: gugi;
+}
+.boton_Comprar{
+    text-decoration: none;
+    padding: 2px;
+    font-weight: 6400;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+  }
