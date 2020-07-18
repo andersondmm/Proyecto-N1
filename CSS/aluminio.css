@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gugi&family=Lato:wght@100&family=Roboto:wght@100&family=Sofia&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}                         
+html{
+    height: 100%;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;                                
+}
+.grid-container >*{
+    box-shadow: -1px 1px  7px 0px white;
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.primero{
+    grid-area: primero;
+    background-color: #45ac9c;
+}
+.segundo{
+    grid-area: segundo;
+    background-color: white;
+}
+.tercero{
+    grid-area: tercero;
+    background-color: white;
+}
+.terceroA{
+    grid-area: terceroA;
+    background-color: white;
+}
+.cuarto{
+    grid-area: cuarto;
+    background-color: white;
+
+}
+.cuartoA{
+    grid-area: cuartoA;
+    background-color: #45ac9c;
+}
+.quinto{
+    grid-area: quinto;
+    background-color: white;
+}
+/*modo celular*/
+.grid-container{
+    display: grid;
+    gap: 2px; /* para separar los grid*/
+    grid-template: 
+    "primero"  50px
+    "segundo"  200px
+    "tercero"  400px
+    "terceroA" 100px
+    "cuartoA"  500px
+    "cuarto"   200px
+    "quinto"   640px /
+     480px auto;
+}
+
+/*modo de 100px*/
+@media (min-width:100px){
+    .grid-container{
+        /*alto de las filas*/
+        grid-template:
+        "primero"   50px
+        "segundo"   200px
+        "tercero"   250px
+        "terceroA"  100px
+        "cuartoA"   300px
+        "cuarto"    750px
+        "quinto"    300px/
+        /* ancho de las filas*/
+        auto
+        ;
+    }
+}   
+ 
+/*modo tablet   mas de 600px*/
+@media (min-width:600px){
+    .grid-container{
+        /*alto de las filas*/
+        grid-template:
+        "primero"   50px
+        "segundo"   200px
+        "tercero"   250px
+        "terceroA"  200px
+        "cuartoA"   300px
+        "cuarto"    700px
+        "quinto"    400px/
+        /* ancho de las filas*/
+        auto
+        ;
+    }
+}     
+
+/*modo escritorio*/     
+@media (min-width:900px){
+    .grid-container{
+        /*alto de las filas*/
+        grid-template:
+        "primero primero"   50px
+        "segundo segundo"   150px
+        "tercero tercero "   200px
+        "terceroA terceroA" 350px
+        "cuartoA cuarto"    auto
+        "quinto  quinto"   550px/
+        /* ancho de las filas*/
+        300px auto
+        ;
+    }
+}
+/*ESTILOS DEL PRIMER APARTADO*/
+.nombredelsitio {
+    display: flex;
+    margin-top: auto;
+    color: black;
+}
+
+.enlaces{
+    text-align: right;
+    margin-top: -25px;
+    text-decoration: none;
+    
+}
+.enlaces a{
+    text-decoration: none;
+    color: white;
+}
+/*ESTILOS DEL SEGUNDO APARTADO*/
+.logoNombre{
+    position: absolute;
+    top: 90px;  
+}
+.buscar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    background: rgb(143, 185, 206);
+    padding: 20px;
+    height: 20px;
+    border-radius: 30px;
+    
+}
+.buscar_texto{
+    border: none;
+    background: none;
+    outline: none;
+    color: rgba(241, 233, 233, 0.993);
+    font-size: 20px;
+    float: left;
+    line-height: 60px;
+    transition: .3s;
+    width:10;
+}                              
+.buscar .buscar_texto{
+    font-size: 1.2vw;
+}
+.boton{
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    color: rgb(245, 240, 240);
+    font-size: 30px;
+
+}
+.asistencia{
+    position: absolute;
+    margin-left: 70%;
+    margin-top: 10px;
+} 
+.segundo{
+    border-bottom: 2px solid #45ac9c;
+}                                        
+.cart{
+    float: right;
+    margin-right: 3vw;
+}
+
+.cart ion-icon{
+    vertical-align: bottom;
+    font-size: 20px;
+    padding-right: 5px;
+}
+.cart a{
+    background-color: rgb(62, 121, 126);
+    color: rgb(245, 239, 239);
+    cursor: pointer;
+    text-decoration: none;
+    
+} 
+
+/* ESTILOS DEL TERCER APARTADO*/
+
+.navegacion{
+    border-bottom: 2px solid #45ac9c;
+    width: 100%;
+    margin-top: -3%;
+   
+    
+}
+.navegacion nav{
+    width: 90%;
+    max-width: 1100px;
+    /*background: #2D3447; */
+    background: white;
+    margin: 40px auto;
+    height: auto;
+    max-width: 100%;
+    
+   
+}
+.navegacion nav ul{
+    list-style: none;
+    position: relative;
+    display: inline-block;
+}
+.navegacion nav > ul > li{
+    display: inline-block;
+}
+.navegacion nav > ul > li > a{
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+.navegacion nav > ul > li > a i{
+    font-size: 20px;
+    position: absolute;
+    bottom: -10px;
+    display: none;
+}
+.navegacion nav > ul > li:hover i{
+    display: block;
+
+}
+/*ESTILOS DEL SUBMENU*/
+li a{
+    text-decoration: none;
+    color: rgb(143, 185, 206);
+    
+    
+}
+
+.navegacion nav ul li .submenu{
+     background: #fff;
+     padding: 10px;
+     position: absolute;
+     display: none;
+     -webkit-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.24);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.24);
+    
+    
+}
+.navegacion nav ul li:hover .submenu{
+    display: flex;
+    height: auto;
+    max-width: 100%;
+}
+.navegacion nav ul li .submenu .submenu-items{
+    margin:  0 20px;
+}
+.navegacion nav ul li .submenu p{
+    font-weight: 600;
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #565656;
+    margin-bottom: 10px;
+   
+}
+.navegacion nav ul li .submenu .submenu-items{
+    color: #474747;
+    text-decoration: none;
+    margin: 5px 0;
+    
+}
+/*ESTILOS DEL APARTADO TERCERO A*/
+.terceroA{
+    margin-top: -70px;
+    
+}
+.container-terA .imgportada img{
+    width: auto;
+    max-width: 100%;    
+}
+
+
+/* ESTILOS DEL APARTADO CUARTO A*/
+.cuartoA{
+    margin-top: 2vw;
+}
+.container-cuartoA li{
+    list-style-type:none;
+    position:relative;
+    width:120px;
+}
+.container-cuartoA{
+    margin-top: 10px;
+}
+.container-cuartoA li a{
+    font-size: 12px;
+    text-decoration:none;
+    display:inline-block;
+    padding:5px 10px;
+    width:150px;
+    height:45px;
+    border:1px solid #000;
+    color:#fff;
+    background-color:#45ac9c;
+
+}
+.container-cuartoA li a:hover{
+    color:#000;
+    background-color:#fff;
+}
+.container-cuartoA nav li ul{
+    display:none;
+        position:absolute;
+        top:0px;
+        left:150px;
+        font-size: 12px;
+}
+.container-cuartoA nav li:hover ul{display:block;}
+/*ESTILOS DEL CUARTO APARTADO*/
+.cuarto{
+    margin-top: 10px;
+    height: auto;
+}
+.container_cuarto {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    padding-bottom: 100px;
+    width: auto;
+    max-width: 100%;  
+    
+}
+
+ .imagen{
+    margin-right: 20px;
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+    width: auto;
+    max-width: 100%;                         
+}
+.imagen img{
+    width: 200px;
+    height: 200px;
+}
+.add-cart{
+    /*position: absolute;*/
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    background-color: darkgray;
+    opacity: 0;
+    cursor: pointer;
+    text-align: center;
+}                                 
+.imagen:hover .cart1,
+.imagen:hover .cart2,
+.imagen:hover .cart3
+
+{
+    
+    bottom: 50px;
+    opacity: 1;
+    padding: 4px;
+    text-decoration: none;
+}
+
+/* ESTILOS DEL QUINTO APARTADO */
+.quinto{
+    margin-top: 200px;
+   height: auto;
+    
+}
+.contenedor-quinto{
+    background-color: #f0f3f3;
+    padding: 3.5em;
+    overflow: hidden;
+    height: auto;
+    max-width: 100%;
+                                                          
+}
+.quinto-item a{                                                              
+    text-decoration: none;
+    color: black;
+}
+.quinto-item{
+    
+    margin: 4em;
+    padding: 1em;
+    color: black;
+    float: left;
+    margin-top: -6%;
+    position: relative;
+}
+#cont-quinto-item1{
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+    
+    
+}
+.linkphone{
+    text-decoration: none;
+}
+#cont-quinto-item2{
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+}
+#cont-quinto-item3{
+    background-color: #f0f3f3;
+    text-align: left;
+    line-height: 30px;
+}
+
+.quinto-item h4{
+    margin: 4px;
+    border-bottom: 2px solid #45ac9c;
+    font-family: gugi;
+}
+
